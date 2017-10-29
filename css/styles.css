@@ -12,7 +12,6 @@ body {
   font-size: 14px;
   font-family: 'Roboto';
   font-weight: 400;
-  max-width: 1920px;
   background: #f8f8f8;
 }
 
@@ -27,6 +26,7 @@ li {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 p, h1, h2, h3 {
@@ -43,11 +43,13 @@ button {
 
 .wrapper {
   height: 100%;
+  min-width: 1500px;
+  max-width: 100%;
 }
 
 .container {
   min-height: 100%;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 
 .content {
@@ -84,6 +86,7 @@ header {
   background-color: #abeafa;
   width: 100%;
   position: relative;
+  min-height: 350px;
 }
 
 .top-header {
@@ -109,21 +112,34 @@ header {
   margin-right: 11px;
 }
 
+.header-social li:hover {
+  background: #e24602;
+}
+
 .header-social a {
   font-size: 16px;
   color: #fff;
+  padding: 7px 0;
+  width: 30px;
+  text-align: center;
 }
 
-.shop-cart-header {
-  background: url(../img/header-img.jpg) no-repeat 50% 0;
+.header-cart-img {
+  background-image: url(../img/header-img.jpg);
+  background-size: contain;
+  width: 1500px;
+  margin: auto;
 }
 
 .log-in {
   width: 270px;
-  height: 150px;
   background: #fb4d01;
   margin-top: 40px;
   font-family: 'Raleway';
+}
+
+.log-in a:hover {
+  text-decoration: underline;
 }
 
 .login-wish {
@@ -154,7 +170,8 @@ header {
   display: inline-block;
 }
 
-.cart-price p {
+.final-price {
+  display: block;
   font-size: 18px;
   font-weight: 600;
   color: #fff;
@@ -170,6 +187,7 @@ header {
   display: block;
   width: 20px;
   height: 16px;
+  margin-bottom: 8px;
 }
 
 .cart-edit a {
@@ -186,7 +204,6 @@ header {
 .view-check li {
   background: #ee4a02;
   display: inline-block;
-  padding: 8px 0;
   width: 50%;
   text-align: center;
 }
@@ -195,10 +212,16 @@ header {
   background: #e24602;
 }
 
+.view-check li a:hover {
+  background: #faef03;
+  color: #333;
+}
+
 .view-check li a {
   font-size: 11px;
   color: #fff;
   text-transform: uppercase;
+  padding: 8px 0;
 }
 
 .search {
@@ -227,6 +250,7 @@ header {
   height: 34px;
   background: #333333;
   border: none;
+  cursor: pointer;
 }
 
 .search::after {
@@ -253,7 +277,7 @@ header {
 .aside-menu li a {
   color: #000;
   display: block;
-  padding: 18px 40px;
+  padding: 10px 40px 8px;
 }
 
 .aside-menu li a:hover {
@@ -264,7 +288,8 @@ header {
 .aside-menu h3 {
   color: #fff;
   background: #333333;
-  padding: 30px 40px;
+  padding: 25px 40px;
+  font-size: 14px;
 }
 
 .tags-widget {
@@ -297,7 +322,7 @@ header {
 
 .tags-widget li a:hover {
   background: #faef03;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -325,8 +350,8 @@ header {
 
 .aside-banner p {
   position: absolute;
-  right: 15px;
-  bottom: 28px;
+  right: 20px;
+  bottom: 50px;
   font-size: 36px;
   font-family: 'Raleway';
   font-style: italic;
@@ -336,6 +361,10 @@ header {
   width: 110px;
 }
 
+.breadcrumbs {
+  margin: 30px 0 45px 0;
+}
+
 .breadcrumbs li {
   display: inline-block;
 }
@@ -343,16 +372,151 @@ header {
 .breadcrumbs li a {
   font-size: 12px;
   color: #989898;
+  padding: 5px;
+}
+
+.breadcrumbs li a:hover {
+  background: #faef03;
 }
 
 .breadcrumbs li a::after {
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f101";
   margin: 0 6px;
+  background: none;
 }
 
 .breadcrumbs li:last-child a::after {
   content: "";
+}
+
+.back-previos {
+  font-size: 12px;
+  color: #999999;
+  padding: 5px;
+}
+
+.back-previos:hover {
+  background: #faef03;
+}
+
+.back-previos::before {
+  content: "\f100";
+  font: normal normal normal 14px/1 FontAwesome;
+  margin: 0 6px;
+}
+
+/*filter*/
+.arrow-select {
+  position: relative;
+  display: inline-block;
+}
+
+.filter {
+  font-family: 'Roboto';
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.filter > div {
+  float: left;
+}
+
+.filter select {
+  padding: 2px 40px 2px 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid 1px #efeeee;
+  font-size: 12px;
+  color: #666669;
+  text-transform: none;
+}
+
+.filter .arrow-select::after {
+  content: "\f107";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+
+.fa-long-arrow-up {
+  color: #a7a7a9;
+  font-weight: 100;
+  margin-left: 5px;
+}
+
+.view {
+  margin: 0 80px 0 95px;
+}
+
+.view ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.view li {
+  display: inline-block;
+}
+
+.view a {
+  background: url(../img/icons.png) no-repeat;;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.view-block a {
+  background-position: -70px 0;
+  margin: 0 20px;
+}
+
+.view-list a {
+  background-position: -90px 0;
+}
+
+.show-page {
+  margin-right: 100px;
+}
+
+.page ul {
+  display: inline-block;
+}
+
+.page li {
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.page a:hover,
+.page .active a {
+  background: #26d2fc;
+  color: #fff;
+}
+
+.page li:last-child {
+  margin: 0;
+}
+
+.page li a {
+  color: #333;
+  padding: 3px 5px;
+  display: block;
+  min-width: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.page .next {
+  background: none;
+}
+
+.fa-angle-right::before {
+  color: #c6c6c6;
 }
 
 /*shop*/
@@ -360,10 +524,16 @@ header {
 .shop-item {
   float: left;
   width: 270px;
-  height: 320px;  /********************************/
   background: #fff;
   margin: 0 30px 30px 0;
+  padding-top: 10px;
   text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #333333;
+  position: relative;
 }
 
 .shop-item:nth-child(3n) {
@@ -372,15 +542,54 @@ header {
 
 .shop-item figcuption {
   display: block;
-  padding: 14px 30px 0 14px;
+  padding: 14px 30px 14px 14px;
+  overflow: hidden;
+  min-height: 80px;
+  color: #333333;
 }
 
-.shop-item {
-  font-size: 14px;
-  font-weight: 900;
-  font-style: italic;
-  text-transform: uppercase;
-  color: #333333;
+.shop-item:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.shop-item .goods-name {
+  width: 140px;
+  text-align: left;
+}
+
+.mark::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 45px 45px 0;
+  border-color: transparent #e24502 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mark::before {
+  content: "NEW";
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  color: #fff;
+  font-size: 9px;
+  z-index: 1;
+}
+
+.mark-hot::after {
+  border-color: transparent #faef03 transparent transparent;
+}
+
+.mark-hot::before {
+  content: "HOT";
+  color: #000;
 }
 
 .shop-price {
@@ -405,12 +614,21 @@ header {
 }
 
 /*footer*/
+footer p,
+footer a {
+  color: #fff;
+}
+
 .footer-top-social li {
   float: left;
   width: 390px;
   text-align: center;
   background: #3b5997;
   margin: auto;
+}
+
+.footer-top-social li:hover {
+  opacity: 0.8;
 }
 
 .footer-top-social a {
@@ -431,10 +649,44 @@ header {
   background: #373737;
 }
 
-.info-footer > div {
-  display: inline-block;
+.ul-info {
+  padding: 75px 30px 65px 30px;
+}
+
+.ul-info > li {
+  float: left;
+}
+
+.ul-info > li a {
+  font-size: 12px;
+}
+
+.ul-info h3 {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.category,
+.our-account {
+  width: 200px;
+}
+
+.our-support {
+  width: 180px;
+}
+
+.newsletter {
+  width: 300px;
+}
+
+.about-us {
+  width: 230px;
 }
 
 .copyright {
   background: #333333;
+  text-align: center;
 }
