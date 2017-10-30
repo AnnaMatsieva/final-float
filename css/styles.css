@@ -53,7 +53,7 @@ main {
 
 .container {
   min-height: 100%;
-  padding-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 .content {
@@ -163,6 +163,14 @@ header {
   background-size: contain;
   width: 1500px;
   margin: auto;*/
+}
+
+.header-home {
+  background-image: url(../img/home.jpg);
+  background-size: contain;
+  width: 1500px;
+  height: 700px;
+  margin: auto;
 }
 
 .log-in {
@@ -296,7 +304,35 @@ header {
   color: #fff;
 }
 
+.yellow-banner {
+  background: #fff51f;
+  width: 270px;
+  margin-top: 10px;
+  padding: 80px 25px;
+  font-family: 'Raleway';
+  font-weight: 700;
+}
+
+.yellow-banner h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.yellow-banner p {
+  padding-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 14px;
+  word-break: break-all;
+}
+
 /*main*/
+.negative-position {
+  position: relative;
+  margin-top: -20px;
+  background: #f8f8f8;
+}
 
 /*aside*/
 .aside-menu {
@@ -326,15 +362,18 @@ header {
   font-size: 14px;
 }
 
-.tags-widget {
+.aside-block {
   margin-top: 30px;
   background: #fff;
   padding: 20px;
   font-family: 'Roboto';
+}
+
+.tags-widget {
   font-size: 0;
 }
 
-.tags-widget h3 {
+.aside-block h3 {
   font-size: 24px;
   font-weight: 900;
   font-style: italic;
@@ -368,11 +407,31 @@ header {
   margin-top: 20px;
 }
 
+.link-arrow:hover {
+  color: #fb4d01;
+}
+
 .link-arrow::after {
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f178";
   font-weight: 100;
   margin-left: 8px;
+}
+
+.articles-experts li {
+  margin-bottom: 20px;
+}
+
+.articles-experts li {
+  margin-top: 0;
+}
+
+.articles-experts li a {
+  color: #555555;
+}
+
+.articles-experts li a:hover {
+  color: #fb4d01;
 }
 
 .aside-banner {
@@ -393,6 +452,10 @@ header {
   color: #333333;
   text-transform: uppercase;
   width: 110px;
+}
+
+.content-column {
+  background: #f8f8f8;
 }
 
 .breadcrumbs {
@@ -450,7 +513,6 @@ header {
   font-family: 'Roboto';
   font-size: 11px;
   text-transform: uppercase;
-  margin-bottom: 25px;
 }
 
 .filter > div {
@@ -504,6 +566,10 @@ header {
   display: block;
 }
 
+.view a:hover {
+  opacity: 0.8;
+}
+
 .view-block a {
   background-position: -70px 0;
   margin: 0 20px;
@@ -549,16 +615,30 @@ header {
   background: none;
 }
 
-.fa-angle-right::before {
+.page .fa-angle-right::before {
   color: #c6c6c6;
 }
 
 /*shop*/
+.shop {
+   margin-top: 25px;
+}
+
+.shop h2 {
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 0 30px;
+  margin: 0;
+  color: #707070;
+  margin-bottom: 25px;
+}
 
 .shop-item {
   float: left;
   width: 270px;
-  min-height: 325px;
+  min-height: 320px;
   background: #fff;
   margin: 0 30px 30px 0;
   padding-top: 10px;
@@ -571,13 +651,13 @@ header {
   position: relative;
 }
 
-.shop-item:nth-child(3n) {
+.shop-item:nth-of-type(3n) {
   margin-right: 0;
 }
 
 .shop-item figcuption {
   display: block;
-  padding: 14px 30px 14px 14px;
+  padding: 14px 15px 0px 28px;
   color: #333333;
 }
 
@@ -596,6 +676,32 @@ header {
 .shop-item .goods-name {
   width: 140px;
   text-align: left;
+}
+
+.top-products{
+  margin-top: 35px;
+}
+
+.sale-products {
+  margin-top: 45px;
+}
+
+.shop-slider-arrow {
+  margin: 5px 15px 0 0;
+}
+
+.shop-slider-arrow li {
+  display: inline-block;
+  margin-right: 17px;
+}
+
+.shop-slider-arrow li a:hover {
+  color: #26d2fc;
+}
+
+.shop-slider-arrow a {
+  font-size: 20px;
+  color: #707070;
 }
 
 .mark::after {
@@ -708,6 +814,7 @@ footer a {
   font-size: 18px;
   color: #fff;
   margin-bottom: 25px;
+  margin-top: 0;
 }
 
 .category,
