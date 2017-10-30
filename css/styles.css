@@ -41,6 +41,10 @@ button {
   cursor: pointer;
 }
 
+main {
+  display: block;
+}
+
 .wrapper {
   height: 100%;
   min-width: 1500px;
@@ -53,8 +57,9 @@ button {
 }
 
 .content {
-  width: 1170px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .left-column {
@@ -109,26 +114,55 @@ header {
 
 .header-social li {
   display: inline-block;
-  margin-right: 11px;
 }
 
 .header-social li:hover {
   background: #e24602;
 }
 
+.header-social li:hover:last-child {
+  background: none;
+}
+
 .header-social a {
   font-size: 16px;
   color: #fff;
-  padding: 7px 0;
-  width: 30px;
+  padding: 5px 0;
+  width: 25px;
   text-align: center;
 }
 
+.language {
+  font-size: 10px;
+}
+
+.language select {
+  padding: 5px 13px 5px 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  font-size: 12px;
+  color: #fff;
+  text-transform: none;
+}
+
+.language .arrow-select::after {
+  content: "\f107";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: #e7e9ea;
+  cursor: pointer;
+}
+
 .header-cart-img {
-  background-image: url(../img/header-img.jpg);
+  /*background-image: url(../img/header-img.jpg);
   background-size: contain;
   width: 1500px;
-  margin: auto;
+  margin: auto;*/
 }
 
 .log-in {
@@ -288,14 +322,14 @@ header {
 .aside-menu h3 {
   color: #fff;
   background: #333333;
-  padding: 25px 40px;
+  padding: 25px 40px 22px 40px;
   font-size: 14px;
 }
 
 .tags-widget {
   margin-top: 30px;
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   font-family: 'Roboto';
   font-size: 0;
 }
@@ -524,6 +558,7 @@ header {
 .shop-item {
   float: left;
   width: 270px;
+  min-height: 325px;
   background: #fff;
   margin: 0 30px 30px 0;
   padding-top: 10px;
@@ -543,9 +578,11 @@ header {
 .shop-item figcuption {
   display: block;
   padding: 14px 30px 14px 14px;
-  overflow: hidden;
-  min-height: 80px;
   color: #333333;
+}
+
+.shop-item img {
+  width: 250px;
 }
 
 .shop-item:hover {
@@ -650,18 +687,22 @@ footer a {
 }
 
 .ul-info {
-  padding: 75px 30px 65px 30px;
+  padding: 75px 25px 65px 25px;
 }
 
 .ul-info > li {
   float: left;
 }
 
-.ul-info > li a {
+.ul-info a {
   font-size: 12px;
 }
 
-.ul-info h3 {
+.ul-info a:hover {
+  color: #fff51f;
+}
+
+.ul-info h4 {
   font-family: 'Raleway';
   font-weight: 800;
   font-size: 18px;
@@ -686,7 +727,111 @@ footer a {
   width: 230px;
 }
 
+.newsletter h4,
+.about-us h4 {
+  margin-bottom: 5px;
+}
+
+.footer-email input[type = "email"] {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 0 10px 20px;  
+  background: #fff51f;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.footer-email input[type = "submit"] {
+  position: absolute;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 0;
+  padding: 11px 10px 10px 10px;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+}
+
+.pay-card {
+  margin-top: 45px;
+}
+
+.pay-card li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.pay-card li:last-child {
+  margin-right: 0;
+}
+
+.pay-card a {
+  background: url("../img/paycard.png") no-repeat;
+  display: block;
+  height: 23px;
+  width: 36px;
+}
+
+.pay-card a:hover {
+  opacity: 0.8;
+}
+
+.mastercard a {
+  background-position: -38px 0;
+}
+
+.maestro a {
+  background-position: -76px 0;
+}
+
+.paypal a {
+  background-position: -114px 0;
+}
+
+.discover a {
+  background-position: -152px 0;
+}
+
+.visa a {
+  background-position: -190px 0;
+}
+
+.footer-text {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 15px;
+}
+
+.footer-phone a,
+.footer-email a {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.footer-email a {
+  color: #fff51f;
+}
+
 .copyright {
   background: #333333;
-  text-align: center;
+  padding: 25px 0;
+}
+
+.copyright p > span {
+  text-transform: uppercase;
+}
+
+.footer-social li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0;
+}
+
+.footer-social a:hover {
+  color: #fff51f;
 }
