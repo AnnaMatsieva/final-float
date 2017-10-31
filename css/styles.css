@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   height: 100%;
   margin: 0 auto;
@@ -29,16 +28,12 @@ a {
   display: block;
 }
 
-p, h1, h2, h3 {
-  margin: 0;
-}
-
+p,
+h1,
+h2,
+h3,
 figure {
   margin: 0;
-}
-
-button {
-  cursor: pointer;
 }
 
 main {
@@ -47,8 +42,7 @@ main {
 
 .wrapper {
   height: 100%;
-  min-width: 1500px;
-  max-width: 100%;
+  min-width: 1200px;
 }
 
 .container {
@@ -87,7 +81,7 @@ main {
 }
 
 /*header*/
-header {
+.header {
   background-color: #abeafa;
   width: 100%;
   position: relative;
@@ -159,16 +153,16 @@ header {
 }
 
 .header-cart-img {
-  /*background-image: url(../img/header-img.jpg);
+  background-image: url(../img/header-img.jpg);
   background-size: contain;
-  width: 1500px;
-  margin: auto;*/
+  /*width: 1500px;*/
+  margin: auto;
 }
 
 .header-home {
   background-image: url(../img/home.jpg);
   background-size: contain;
-  width: 1500px;
+  /*width: 1500px;*/
   height: 700px;
   margin: auto;
 }
@@ -331,7 +325,6 @@ header {
 .negative-position {
   position: relative;
   margin-top: -20px;
-  background: #f8f8f8;
 }
 
 /*aside*/
@@ -756,9 +749,133 @@ header {
   font-size: 14px;
 }
 
+/*brands*/
+.brands {
+  margin-top: 30px;
+  padding: 70px 13px 65px 13px;
+  background: #fff;
+}
+
+.brands li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.brands li:last-child {
+  margin-right: 0;
+}
+
+.brands li:hover{
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+}
+
+.brand {
+  background: url("../img/brand.png") no-repeat;
+  height: 75px;
+}
+
+.brand-billa {
+  background-position: 0px 0;
+  width: 209px;
+}
+
+.brand-element {
+  background-position: -220px 0;
+  width: 183px;
+}
+
+.brand-oneil {
+  background-position: -421px 0;
+  width: 115px;
+}
+
+.brand-oakley {
+  background-position: -550px 0;
+  width: 115px;
+}
+
+.brand-quiksilver {
+  background-position: -682px 0;
+  width: 180px;
+}
+
+.brand-reef {
+  background-position: -887px 0;
+  width: 90px;
+}
+
+.brand-ripcurl {
+  background-position: -990px 0;
+  width: 125px;
+}
+
+/*insta*/
+.insta-block {
+  text-align: center;
+  background: #eaeaea;
+  padding-bottom: 60px;
+}
+
+.insta-block h3 {
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+  padding: 50px 0 25px 0;
+}
+
+.insta-block h3 span {
+  font-size: 18px;    
+}
+
+.insta-block li {
+  display: inline-block;
+  margin-right: 12px;
+  border: solid 3px #fff;
+}
+
+.insta-block li:last-child {
+  margin-right: 0;
+}
+
+.insta-block li:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*footer*/
-footer p,
-footer a {
+.footer p,
+.footer a {
   color: #fff;
 }
 
