@@ -77,7 +77,7 @@ button:hover {
 }
 
 .right-column {
-  width: 870px;
+  width: 885px;
   float: right;
 }
 
@@ -338,6 +338,14 @@ button:hover {
   margin-top: -20px;
 }
 
+.negative-position-cart {
+  margin-top: -130px;
+}
+
+.negative-position-cart .content-column {
+  padding-left: 0;
+}
+
 /*aside*/
 .aside-menu {
   text-transform: uppercase;
@@ -464,9 +472,14 @@ button:hover {
 
 .content-column {
   background: #f8f8f8;
+  padding-left: 15px;
 }
 
 /*breadcrumbs*/
+.negative-position .breadcrumbs {
+  padding: 0 40px;
+}
+
 .breadcrumbs {
   margin: 30px 0 45px 0;
 }
@@ -510,6 +523,216 @@ button:hover {
   content: "\f100";
   font: normal normal normal 14px/1 FontAwesome;
   margin: 0 6px;
+}
+
+/*Shopping cart, basket*/
+.basket-tabbar-menu {
+  margin-left: 40px;
+}
+
+.basket-tabbar-menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 45px;
+}
+
+.basket-tabbar-menu li:last-child {
+  margin-right: 0;
+}
+
+.basket-tabbar-menu a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+
+.basket-tabbar-menu .active,
+.basket-tabbar-menu a:hover {
+  color: #ff0101;
+}
+
+.basket-tabbar-menu span {
+  position: relative;
+}
+
+.basket-tabbar-menu span::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: solid #aaaaaa 1px;
+  border-radius: 50%;
+  position: relative;
+  top: 8px;
+  right: 23px;
+}
+
+.basket-tabbar-menu .active span::after,
+.basket-tabbar-menu a:hover span::after {
+  border-color: #ff0101;
+}
+
+.basket-tab {
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.cart-panel-header {
+  font-weight: 500;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 0;
+  padding-bottom: 10px;
+  border-bottom: solid #f1f1f1 1px;
+}
+
+.cart-panel-header li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cart-panel {
+  width: 615px;
+}
+
+.cart-panel-name {
+  width: 290px;
+}
+
+.cart-panel-unit {
+  width: 130px;
+}
+
+.cart-panel-qty {
+  width: 70px;
+}
+
+.cart-panel-subtotal {
+  width: 125px;
+}
+
+.cart-product {
+  margin-top: 10px;
+}
+
+.cart-product {
+  padding-bottom: 10px;
+  border-bottom: solid #f1f1f1 1px;
+}
+
+.cart-product > li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cart-product-img {
+  width: 70px;
+  height: 110px;
+  background: #eaeaea;
+  margin: 0 15px 0 10px;
+}
+
+.cart-product-description {
+  width: 190px;
+}
+
+.cart-product-description h2 {
+  font-weight: 700;
+  font-size: 14px;
+  color: #353535;
+}
+
+.cart-product-social {
+  margin-top: 15px;
+}
+
+.cart-product-social li {
+  display: inline-block;
+}
+
+.cart-product-social a {
+  color: #333333;
+  font-size: 14px;
+  padding: 0 9px 0 5px;
+}
+
+.cart-product-social a:hover {
+  color: #fb4d01;
+}
+
+.cart-product-price,
+.cart-product-subtotal {
+  width: 127px;
+}
+
+.cart-product-price .shop-price,
+.cart-product-subtotal .shop-price {
+  text-align: center;
+  font-size: 14px;
+  color: #666669;
+}
+
+.cart-product-price .shop-price::before,
+.cart-product-subtotal .shop-price::before {
+  font-size: 14px;
+  color: #666669;
+}
+
+.cart-product-subtotal {
+  position: relative;
+}
+
+.cart-product-close {
+  background: url("../img/icons.png") no-repeat;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-position: -45px -16px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.cart-product-total input {
+  width: 35px;
+  height: 25px;
+  border: solid #f8f8f8 1px;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+.total-decrease,
+.total-increase {
+  width: 11px;
+  height: 18px;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  top: 5px;
+}
+
+.total-decrease::before,
+.total-increase::before {
+  content: "";
+  background: url("../img/icons.png") no-repeat;
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 18px;
+  background-position: -234px 0;
+}
+
+.total-increase::before {
+  background-position: -242px 0;
+}
+
+.checkout {
+  width: 270px;
+  height: 390px;
+  background: #fb4d01;
 }
 
 /*product-info, thumbs*/
@@ -980,7 +1203,7 @@ button:hover {
 
 .coloring-slider {
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
   white-space: nowrap;
 }
 
