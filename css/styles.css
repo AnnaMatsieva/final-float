@@ -526,6 +526,11 @@ button:hover {
 }
 
 /*Shopping cart, basket*/
+.basket-tabbar .line {
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+
 .basket-tabbar-menu {
   margin-left: 40px;
 }
@@ -639,10 +644,14 @@ button:hover {
   width: 190px;
 }
 
-.cart-product-description h2 {
+.cart-product-name {
   font-weight: 700;
   font-size: 14px;
   color: #353535;
+}
+
+.cart-product-name:hover {
+  color: #fb4d01;
 }
 
 .cart-product-social {
@@ -733,6 +742,102 @@ button:hover {
   width: 270px;
   height: 390px;
   background: #fb4d01;
+  color: #fff;
+  padding: 30px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.checkout-info {
+  margin: 40px 0 60px 0;
+}
+
+.checkout-info {
+  text-align: left;
+}
+
+.checkout h3 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.checkout li {
+  margin-bottom: 25px;
+}
+
+.checkout li span {
+  float: right;
+}
+
+.checkout .shop-price {
+  font-size: 14px;
+}
+
+.checkout .shop-price::before {
+  font-size: 12px;
+}
+
+.checkout-order {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.checkout-order .shop-price {
+  font-size: 16px;
+}
+
+.checkout-order .shop-price::before {
+  font-size: 14px;
+}
+
+.checkout-button {
+  font-size: 28px;
+  font-weight: 700;
+  background: #333333; 
+  padding: 4px 0;
+  width: 230px;
+  text-align: center;
+}
+
+.product-coupon {
+  padding: 20px 33px 20px 20px;
+}
+
+.product-coupon h3 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.product-coupon button {
+  font-size: 14px;
+  background: #333333;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.product-coupon-link {
+  text-align: right;
+  font-style: italic;
+  text-decoration: underline;
+  color: #333333;
+}
+
+.product-coupon-link:hover {
+  color: #fb4d01;
+}
+
+.product-coupon input {
+  width: 240px;
+  font-size: 11px;
+  padding: 8px 10px;
+  border: solid #f4f4f4 1px;
+  margin-top: 13px;
 }
 
 /*product-info, thumbs*/
@@ -1199,12 +1304,17 @@ button:hover {
 .also-like,
 .recently-viewed {
   margin-top: 75px;
+  overflow: hidden;
 }
 
 .coloring-slider {
   position: relative;
-  /*overflow: hidden;*/
   white-space: nowrap;
+  padding: 0 6px;
+}
+
+.coloring-slider .shop-item {
+  margin-right: 30px;
 }
 
 .coloring-slider-next,
