@@ -8,9 +8,7 @@ body {
   border: 0;
   padding: 0;
   color: #000;
-  font-size: 14px;
-  font-family: 'Roboto';
-  font-weight: 400;
+  font: normal 400 14px Roboto, serif;
   background: #f8f8f8;
 }
 
@@ -36,6 +34,10 @@ figure {
   margin: 0;
 }
 
+select {
+  cursor: pointer;
+}
+
 main {
   display: block;
 }
@@ -44,7 +46,6 @@ button {
   font-size: 16px;
   text-transform: uppercase;
   color: #fff;
-  text-transform: uppercase;
   background: #fb4d01;
   padding: 16px 10px;
   border: none;
@@ -62,7 +63,7 @@ button:hover {
 
 .container {
   min-height: 100%;
-  margin-bottom: 80px;
+  margin-bottom: 65px;
 }
 
 .content {
@@ -77,7 +78,7 @@ button:hover {
 }
 
 .right-column {
-  width: 885px;
+  width: 900px;
   float: right;
 }
 
@@ -117,8 +118,7 @@ button:hover {
 
 .header-social {
   text-align: right;
-  margin-right: 20px;
-  margin-top: 22px;
+  margin: 22px 20px 0 0;
 }
 
 .header-social li {
@@ -148,6 +148,7 @@ button:hover {
 .language select {
   padding: 5px 13px 5px 0;
   -webkit-appearance: none;
+  -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: none;
@@ -169,14 +170,99 @@ button:hover {
 
 .header-cart-img {
   background-size: contain;
-  /*width: 1500px;*/
 }
 
 .header-home {
   background-size: contain;
-  /*width: 1500px;*/
-  height: 700px;
+  min-height: 700px;
 }
+
+.header-bottom {
+  position: relative;
+}
+
+.slider-header-content {
+  position: absolute;
+  right: 90px;
+  top: 60px;
+}
+
+.slider-content {
+  width: 330px;
+  color: #fff51f;
+  font: normal 400 18px/24px Raleway, serif;
+}
+
+.slider-content h1 {
+  font-size: 48px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.slider-content p {
+  word-break: break-all;
+}
+
+.slider-content-button {
+  width: 130px;
+  background: #fff51f;
+  color: #000;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.slider-header-arrows {
+  position: absolute;
+  top: 77px;
+  right: -90px;
+}
+
+.header-prev-arrow,
+.header-next-arrow {
+  position: absolute;
+  right: 30px;
+  background: url(../img/icons.png) -254px 17px #fff;
+  width: 30px;
+  height: 50px; 
+}
+
+.header-next-arrow {
+  right: 0;
+  transform: scaleX(-1); 
+} 
+
+.header-prev-arrow:hover,
+.header-next-arrow:hover,
+.slider-header-arrows .active {
+  background-color: #fff51f;
+}
+
+.slider-header-control {
+  text-align: center;
+}
+
+.slider-header-control input[type = "radio"] {
+  border: 0;
+  height: 0;
+  margin-right: 30px;
+}
+
+.slider-header-control input[type = "radio"]:hover::after,
+.slider-header-control input[type = "radio"]:checked::after {
+  background-color: #fb4d01;
+}
+
+.slider-header-control input[type = "radio"]::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #fff51f;
+  cursor: pointer;
+}
+
 
 .log-in {
   width: 270px;
@@ -342,8 +428,16 @@ button:hover {
   margin-top: -130px;
 }
 
-.negative-position-cart .content-column {
-  padding-left: 0;
+.negative-position .content-column{
+  padding: 0;
+}
+
+.negative-position .right-column {
+  width: 870px;
+}
+
+.negative-position-cart .right-column {
+  width: 885px;
 }
 
 /*aside*/
@@ -353,7 +447,8 @@ button:hover {
   font-weight: 900;
   color: #000;
   background: #26d2fc;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
 }
 
 .aside-menu-lighter {
@@ -381,7 +476,7 @@ button:hover {
 .aside-block {
   margin-top: 30px;
   background: #fff;
-  padding: 20px;
+  padding: 25px 0px 20px 28px;
   font-family: 'Roboto';
 }
 
@@ -390,9 +485,7 @@ button:hover {
 }
 
 .aside-block h3 {
-  font-size: 24px;
-  font-weight: 900;
-  font-style: italic;
+  font: italic 900 23px Roboto, serif;
   margin-bottom: 23px;
 }
 
@@ -416,11 +509,8 @@ button:hover {
 }
 
 .link-arrow {
-  font-size: 14px;
-  font-weight: 900;
-  font-style: italic;
+  font: italic 900 14px Roboto, serif;
   color: #000;
-  margin-top: 20px;
 }
 
 .link-arrow:hover {
@@ -428,17 +518,13 @@ button:hover {
 }
 
 .link-arrow::after {
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal 100 14px/1 FontAwesome;
   content: "\f178";
-  font-weight: 100;
   margin-left: 8px;
 }
 
 .articles-experts li {
-  margin-bottom: 20px;
-}
-
-.articles-experts li {
+  margin-bottom: 12px;
   margin-top: 0;
 }
 
@@ -461,10 +547,7 @@ button:hover {
   position: absolute;
   right: 20px;
   bottom: 50px;
-  font-size: 36px;
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 900;
+  font: italic 900 36px Raleway, serif;
   color: #333333;
   text-transform: uppercase;
   width: 110px;
@@ -472,7 +555,7 @@ button:hover {
 
 .content-column {
   background: #f8f8f8;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
 /*breadcrumbs*/
@@ -526,19 +609,23 @@ button:hover {
 }
 
 /*Shopping cart, basket*/
+.basket-tabbar {
+  margin-top: -30px;
+}
+
 .basket-tabbar .line {
   width: 100%;
   margin: 15px 0 0 0;
 }
 
 .basket-tabbar-menu {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .basket-tabbar-menu li {
   display: inline-block;
   vertical-align: top;
-  margin-right: 45px;
+  margin-right: 20px;
 }
 
 .basket-tabbar-menu li:last-child {
@@ -558,6 +645,8 @@ button:hover {
 
 .basket-tabbar-menu span {
   position: relative;
+  top: -4px;
+  font-size: 18px;
 }
 
 .basket-tabbar-menu span::after {
@@ -568,8 +657,8 @@ button:hover {
   border: solid #aaaaaa 1px;
   border-radius: 50%;
   position: relative;
-  top: 8px;
-  right: 23px;
+  top: 9px;
+  right: 21px;
 }
 
 .basket-tabbar-menu .active span::after,
@@ -578,16 +667,14 @@ button:hover {
 }
 
 .basket-tab {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 12px;
 }
 
 .cart-panel-header {
-  font-weight: 500;
-  font-style: italic;
+  font: italic 500 0px Roboto, serif;
   text-transform: uppercase;
   color: #333333;
-  font-size: 0;
   padding-bottom: 10px;
   border-bottom: solid #f1f1f1 1px;
 }
@@ -695,11 +782,10 @@ button:hover {
 }
 
 .cart-product-close {
-  background: url("../img/icons.png") no-repeat;
+  background: url("../img/icons.png") no-repeat -45px -16px;
   position: absolute;
   top: 0;
   right: 10px;
-  background-position: -45px -16px;
   padding: 0;
   width: 20px;
   height: 20px;
@@ -726,12 +812,11 @@ button:hover {
 .total-decrease::before,
 .total-increase::before {
   content: "";
-  background: url("../img/icons.png") no-repeat;
+  background: url("../img/icons.png") no-repeat -234px 0;
   position: absolute;
   top: 0;
   width: 7px;
   height: 18px;
-  background-position: -234px 0;
 }
 
 .total-increase::before {
@@ -802,13 +887,11 @@ button:hover {
 }
 
 .product-coupon {
-  padding: 20px 33px 20px 20px;
+  padding: 35px 33px 20px 20px;
 }
 
 .product-coupon h3 {
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 100;
+  font: italic 100 16px Roboto, serif;
   text-transform: uppercase;
 }
 
@@ -841,6 +924,10 @@ button:hover {
 }
 
 /*product-info, thumbs*/
+.product-info {
+  margin-top: 45px;
+}
+
 .product-big-photo  {
   width: 375px;
   height: 375px;
@@ -875,20 +962,22 @@ button:hover {
   height: 110px;
   border: none;
   background: none;
-  cursor: pointer;
-  /***********************************/
 }
 
-.thumb-prev::before {
+.thumb-prev::before,
+.thumb-next::before {
   content: "";
-  background: url(../img/icons.png) no-repeat;
+  background: url(../img/icons.png) no-repeat -117px 0;
   width: 15px;
   height: 43px;
-  background-position: -117px 0;
   position: absolute;
   top: 35px;
   left: 20px;
-   /****************button****************************/
+}
+
+.thumb-next::before {
+  background-position: -134px 0;
+  right: 20px;
 }
 
 .thumb-next {
@@ -899,17 +988,6 @@ button:hover {
 .thumb-next {
   position: absolute;
   top: 0;
-}
-
-.thumb-next::before {
-  content: "";
-  background: url(../img/icons.png) no-repeat;
-  width: 15px;
-  height: 43px;
-  background-position: -134px 0;
-  position: absolute;
-  top: 35px;
-  right: 20px;/*************************/
 }
 
 .product-descriptions {
@@ -933,11 +1011,10 @@ button:hover {
 }
 
 .stars {
-  background: url(../img/icons.png) no-repeat;
+  background: url(../img/icons.png) no-repeat -150px 0;
   width: 50px;
   height: 10px;
   display: inline-block;
-  background-position: -150px 0;
   cursor: pointer;
 }
 
@@ -961,9 +1038,7 @@ button:hover {
 }
 
 .product-price-code .shop-price {
-  font-size: 22px;
-  font-weight: 500;
-  font-style: italic;
+  font: italic 500 22px Roboto, serif;
   text-align: left;
 }
 
@@ -987,7 +1062,7 @@ button:hover {
   margin: 17px 0 17px 30px;
 }
 
-.product-size-length li {
+.product-size-length label {
   display: inline-block;
   margin-right: 10px;
 }
@@ -1005,8 +1080,8 @@ button:hover {
   display: none;
 }
 
-.product-radio:hover,
-.product-radio input:checked {
+.product-size-length label:hover,
+.product-size-length input[type = "radio"]:checked + span {
   color: #ff4a4a;
 }
 
@@ -1094,8 +1169,7 @@ button:hover {
 }
 
 .filter {
-  font-family: 'Roboto';
-  font-size: 11px;
+  font: 11px 'Roboto';
   text-transform: uppercase;
 }
 
@@ -1104,9 +1178,11 @@ button:hover {
 }
 
 .filter select {
-  padding: 2px 40px 2px 8px;
+  padding: 2px 0px 2px 8px;
+  width: 95px;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: solid 1px #efeeee;
   font-size: 12px;
@@ -1164,7 +1240,7 @@ button:hover {
 }
 
 .show-page {
-  margin-right: 100px;
+  margin-right: 90px;
 }
 
 .page ul {
@@ -1210,14 +1286,11 @@ button:hover {
 }
 
 .shop h2 {
-  font-size: 24px;
-  font-weight: 900;
-  font-style: italic;
+  font: italic 900 24px Roboto, serif;
   text-transform: uppercase;
   padding: 0 30px;
-  margin: 0;
   color: #707070;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
 }
 
 .also-like h2,
@@ -1236,9 +1309,7 @@ button:hover {
   margin: 0 30px 30px 0;
   padding-top: 10px;
   text-align: center;
-  font-size: 14px;
-  font-weight: 900;
-  font-style: italic;
+  font: italic 900 14px Roboto, serif;
   text-transform: uppercase;
   color: #333333;
   position: relative;
@@ -1303,14 +1374,19 @@ button:hover {
 
 .also-like,
 .recently-viewed {
-  margin-top: 75px;
+  margin-top: 100px;
   overflow: hidden;
+  width: 885px;
+  padding-left: 5px;
+}
+
+.recently-viewed {
+  margin-top: 70px;
 }
 
 .coloring-slider {
   position: relative;
   white-space: nowrap;
-  padding: 0 6px;
 }
 
 .coloring-slider .shop-item {
@@ -1336,16 +1412,15 @@ button:hover {
 }
 
 .coloring-slider-next {
-  right: 0;
+  right: 10px;
 }
 
 .coloring-slider-prev::before,
 .coloring-slider-next::before {
   content: "";
-  background: url(../img/icons.png) no-repeat;
+  background: url(../img/icons.png) no-repeat -203px 0;
   width: 15px;
   height: 35px;
-  background-position: -203px 0;
   position: absolute;
   top: 3px;
   left: 14px;
@@ -1409,9 +1484,9 @@ button:hover {
 
 /*brands*/
 .brands {
-  margin-top: 30px;
-  padding: 70px 13px 65px 13px;
+  padding: 43px 18px;
   background: #fff;
+  min-height: 160px;
 }
 
 .brands li {
@@ -1478,9 +1553,7 @@ button:hover {
 }
 
 .insta-block h3 {
-  font-size: 22px;
-  font-weight: 900;
-  font-style: italic;
+  font: italic 900 22px Roboto, serif;
   padding: 50px 0 25px 0;
 }
 
@@ -1488,13 +1561,25 @@ button:hover {
   font-size: 18px;    
 }
 
-.insta-block li {
-  display: inline-block;
-  margin-right: 12px;
-  border: solid 3px #fff;
+.insta-block h3::before {
+  content: "\f16d";
+  font: normal normal normal 34px/21px FontAwesome;
+  position: relative;
+  top: 3px;
+  margin-right: 13px;
+  left: 6px;
 }
 
-.insta-block li:last-child {
+.insta-block li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 7px 7px 0;
+  border: solid 7px #fff;
+  width: 185px;
+  height: 185px;
+}
+
+.insta-block li:nth-of-type(6n) {
   margin-right: 0;
 }
 
@@ -1505,31 +1590,6 @@ button:hover {
   -ms-transform: scale(1.02);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*footer*/
 .footer p,
@@ -1559,7 +1619,7 @@ button:hover {
 .footer-top-social .fa-twitter {
   background: #3fccfd;
 }
-.footer-top-social .fa-pinterest-p {
+.footer-top-social .fa-pinterest {
   background: #cb2027;
 }
 
@@ -1584,9 +1644,7 @@ button:hover {
 }
 
 .ul-info h4 {
-  font-family: 'Raleway';
-  font-weight: 800;
-  font-size: 18px;
+  font: italic 800 18px Raleway, serif;
   color: #fff;
   margin-bottom: 25px;
   margin-top: 0;
