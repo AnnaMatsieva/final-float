@@ -155,7 +155,7 @@ button:hover {
   background: none;
   font-size: 12px;
   color: #fff;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .language .arrow-select::after {
