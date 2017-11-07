@@ -38,21 +38,21 @@ select {
   cursor: pointer;
 }
 
-main {
-  display: block;
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-button {
+.button {
   font-size: 16px;
   text-transform: uppercase;
   color: #fff;
   background: #fb4d01;
   padding: 16px 10px;
-  border: none;
-  cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   opacity: 0.8;
 }
 
@@ -70,6 +70,7 @@ button:hover {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: block; /*for ie*/
 }
 
 .left-column {
@@ -395,7 +396,7 @@ button:hover {
   color: #fff;
 }
 
-.yellow-banner {
+.header-banner {
   background: #fff51f;
   width: 270px;
   margin-top: 10px;
@@ -404,13 +405,13 @@ button:hover {
   font-weight: 700;
 }
 
-.yellow-banner h2 {
+.header-banner h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.yellow-banner p {
+.header-banner p {
   padding-top: 20px;
   font-size: 18px;
   font-style: italic;
@@ -715,7 +716,7 @@ button:hover {
   border-bottom: solid #f1f1f1 1px;
 }
 
-.cart-product > li {
+.cart-product > div {
   display: inline-block;
   vertical-align: top;
 }
@@ -771,12 +772,6 @@ button:hover {
   color: #666669;
 }
 
-.cart-product-price .shop-price::before,
-.cart-product-subtotal .shop-price::before {
-  font-size: 14px;
-  color: #666669;
-}
-
 .cart-product-subtotal {
   position: relative;
 }
@@ -786,7 +781,6 @@ button:hover {
   position: absolute;
   top: 0;
   right: 10px;
-  padding: 0;
   width: 20px;
   height: 20px;
 }
@@ -860,10 +854,6 @@ button:hover {
   font-size: 14px;
 }
 
-.checkout .shop-price::before {
-  font-size: 12px;
-}
-
 .checkout-order {
   font-size: 16px;
   font-weight: 700;
@@ -871,10 +861,6 @@ button:hover {
 
 .checkout-order .shop-price {
   font-size: 16px;
-}
-
-.checkout-order .shop-price::before {
-  font-size: 14px;
 }
 
 .checkout-button {
@@ -895,7 +881,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-.product-coupon button {
+.product-coupon input[type="submit"] {
   font-size: 14px;
   background: #333333;
   width: 200px;
@@ -1006,7 +992,7 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.product-descriptions p {
+.product-descriptions span {
   font-size: 12px;
 }
 
@@ -1040,10 +1026,6 @@ button:hover {
 .product-price-code .shop-price {
   font: italic 500 22px Roboto, serif;
   text-align: left;
-}
-
-.product-price-code .shop-price::before {
-  font-size: 20px;
 }
 
 .product-code-availability {
@@ -1204,6 +1186,8 @@ button:hover {
   color: #a7a7a9;
   font-weight: 100;
   margin-left: 5px;
+  background: none;
+  padding: 0;
 }
 
 .view {
@@ -1319,7 +1303,7 @@ button:hover {
   margin-right: 0;
 }
 
-.shop-item figcuption {
+.shop-item-description {
   display: block;
   padding: 14px 15px 0px 28px;
   color: #333333;
@@ -1363,11 +1347,11 @@ button:hover {
   margin-right: 17px;
 }
 
-.shop-slider-arrow li a:hover {
+.shop-slider-arrow li button:hover {
   color: #26d2fc;
 }
 
-.shop-slider-arrow a {
+.shop-slider-arrow button {
   font-size: 20px;
   color: #707070;
 }
@@ -1464,11 +1448,6 @@ button:hover {
 .shop-price {
   font-size: 18px;
   text-align: right;
-}
-
-.shop-price::before {
-  font: normal normal normal 16px/1 FontAwesome;
-  content: "\f153.";
 }
 
 .shop-old-price {
